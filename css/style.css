@@ -245,21 +245,26 @@ a{
     text-decoration: underline;
     line-height: 19px;
 }
-.gallery__item-inner {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 32px;
+.gallery__item-img{
+    margin: 0 auto;
+    width: 60%;
+}
+.gallery__slider{
+    margin-bottom: 50px;
 }
 .slick-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: -85px;
-    right: 0;
+    top: 50%;
+    z-index: 10;
 }
 .slick-prev {
-    margin-right: 60px;
+    left: 0;
+}
+.slick-next {
+    right: 0;
 }
 .tour {
     padding: 100px 0;
@@ -447,12 +452,8 @@ color: #1F1E1E;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
     }
-    .gallery__item-inner {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .gallery__item-img{
-        width: 100%;
-    }
+
+
     .tour__info{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 15px;
@@ -635,8 +636,11 @@ color: #1F1E1E;
     .gallery__top{
         flex-wrap: wrap;
     }
-    .gallery__item-inner{
-        grid-template-columns: repeat(1,1fr);
+    .gallery__item-img{
+        width: 100%;
+    }
+    .gallery__slider-nav{
+        display: none;
     }
 }
 @media (max-width: 460px) {

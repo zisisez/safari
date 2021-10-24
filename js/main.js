@@ -1,33 +1,44 @@
 $(function(){
-    $('.about__popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
-    $('.gallery__item-inner').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function(item) {
-                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-            }
-        }
-    });
+    // $('.gallery__slider').slick({
+    //     prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
+    //     nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/arrow-right.svg" alt=""></button>'
+    // })
+
     $('.gallery__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.gallery__slider-nav',
         prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
-        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/arrow-right.svg" alt=""></button>'
-    })
+        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/arrow-right.svg" alt=""></button>',
+        responsive: [{
+            breakpoint: 560,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                cssEase: 'linear',
+                dots: false,
+                infinite: true,
+                prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
+                nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/arrow-right.svg" alt=""></button>',
+            }
+        }]
+    });
+    $('.gallery__slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.gallery__slider',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        arrows: false,
+        responsive: [{
+            breakpoint: 560,
+            settings: 'unslick'
+        }]
+
+    });
 
     $('.direction__inner').slick({
         responsive: [{
