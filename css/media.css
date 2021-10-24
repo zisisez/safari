@@ -1,0 +1,125 @@
+
+@media (max-width: 1140px) {
+    .direction__inner{
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+    }
+    .direction__img{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .header__phone span {
+        display: none;
+    }
+    .travel-info__items{
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 40px;
+    }
+    .header__title {
+        margin-top: -30px;
+        font-size: 80px;
+    }
+    .header__descr {
+     color: #fff;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .header__title{
+        font-size: 40px;
+    }
+    .menu__btn{
+        display: inline-block;
+        width: 40px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        right: 10px;
+        top: 107px;
+    }
+    .menu__btn::after,
+    .menu__btn::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 2px;
+        background-color: #fff;
+    }
+    .menu__btn::after{
+        bottom: 0;
+    }
+    .menu__btn::before {
+        top: 0;
+    }
+    .menu__btn span {
+        display: block;
+        height: 2px;
+        background-color: #fff;
+    }
+    .menu__list{
+        transform: translate(-200%);
+        display: block;
+        background-color: #886239;
+        opacity: 0.8;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .menu__link{
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+    .logo{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .header__phone-number{
+        margin-left: 0;
+    }
+    .menu{
+        border: none;
+    }
+    .menu__list.menu__list--active{
+        transform: translate(0%);
+    }
+    .direction__inner{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+    }
+    .direction{
+        padding: 50px 0;
+    }
+    .travel-info__items{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+    .title{
+        font-size: 28px;
+    }
+}
+@media (max-width: 460px) {
+    .travel-info__items{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .direction__inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+
