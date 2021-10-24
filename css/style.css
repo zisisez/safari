@@ -257,14 +257,14 @@ a{
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 110%;
+    top: 50%;
     z-index: 10;
 }
 .slick-prev {
-    left: 30%;
+    left: 0;
 }
 .slick-next {
-    right: 30%;
+    right: 0;
 }
 .tour {
     padding: 100px 0;
@@ -647,7 +647,20 @@ color: #1F1E1E;
     .tour__wrapper {
         text-align: center;
     }
-
+    .slick-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 110%;
+        z-index: 10;
+    }
+    .slick-prev {
+        left: 30%;
+    }
+    .slick-next {
+        right: 30%;
+    }
 }
 @media (max-width: 460px) {
     .header__descr {
@@ -673,7 +686,7 @@ color: #1F1E1E;
         border: none;
         cursor: pointer;
         position: absolute;
-        top: 105%;
+        top: 100%;
     }
     .slick-prev-dir {
         left: 30%;
