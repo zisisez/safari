@@ -257,14 +257,14 @@ a{
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 110%;
     z-index: 10;
 }
 .slick-prev {
-    left: 0;
+    left: 30%;
 }
 .slick-next {
-    right: 0;
+    right: 30%;
 }
 .tour {
     padding: 100px 0;
@@ -642,6 +642,12 @@ color: #1F1E1E;
     .gallery__slider-nav{
         display: none;
     }
+    .about__title,
+    .about__content,
+    .tour__wrapper {
+        text-align: center;
+    }
+
 }
 @media (max-width: 460px) {
     .header__descr {
@@ -667,11 +673,13 @@ color: #1F1E1E;
         border: none;
         cursor: pointer;
         position: absolute;
-        bottom: -60px;
-        right: 35%;
+        top: 105%;
     }
     .slick-prev-dir {
-        margin-right: 60px;
+        left: 30%;
+    }
+    .slick-next-dir{
+        right: 30%;
     }
     .direction {
         padding: 50px 0 70px;
