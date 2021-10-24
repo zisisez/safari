@@ -4,6 +4,7 @@
 *::after,
 *::before{
     box-sizing: border-box;
+    height: -webkit-fill-available;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -11,7 +12,7 @@ body{
     font-size: 18px;
     line-height: 140%;
     color: #1f1e1e;
-
+    min-height: -webkit-fill-available;
 }
 a{
     text-decoration: none;
