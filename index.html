@@ -28,16 +28,16 @@
             тел. 8-050-543-543
           </a>
         </div>
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <button class="menu__btn">
             <span class="row"></span>
           </button>
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="#">Бронирование</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Экскурсии</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Туры</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Об Африке</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" href="#booking">Бронирование</a></li>
+            <li class="menu__item"><a class="menu__link" href="#direction">Экскурсии</a></li>
+            <li class="menu__item"><a class="menu__link" href="#popular">Туры</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about">Об Африке</a></li>
+            <li class="menu__item"><a class="menu__link" href="#tour">О нас</a></li>
           </ul>
         </nav>
       </div>
@@ -50,8 +50,8 @@
         Поехали с нами за новыми впечатлениями!
       </p>
         <a href="#" class="header__btn">Оставить заявку</a>
-        <div class="header__arrow">
-          <a href="#" class="header__arrow-link">
+        <div class="header__arrow" id="header__arrow">
+          <a href="#direction" class="header__arrow-link">
             <img src="images/arrow.svg" alt="" class="header__arrow-img">
           </a>
         </div>
@@ -59,45 +59,131 @@
       </div>
     </div>
   </div>
+  <div class="popup" data-modal>
+    <div class="popup_dialog">
+      <div class="popup_content text-center">
+        <button type="button" class="popup_close"><strong>&times;</strong></button>
+        <div class="popup_form">
+          <h2 class="booking__title title">
+            Забронируйте отдых <br>в Африке
+          </h2>
+          <form action="" class="booking__form">
+            <input type="text" class="booking__input" placeholder="Ваше имя">
+            <input type="text" class="booking__input" placeholder="Телефон">
+            <input type="text" class="booking__input" placeholder="E-mail">
+            <textarea class="booking__area" placeholder="Комментарий"></textarea>
+            <button class="booking__btn" type="submit">Отправить заявку</button>
+            <label class="booking__label">
+              <input type="checkbox" class="booking__checkbox">
+              <span class="booking__checkbox-style"></span>
+              <span class="form__agree">Согласие на обработку персональных данных</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
-<div class="direction">
+<div class="direction" id="direction">
   <div class="container">
     <div class="direction__inner">
       <div class="direction__item"><img src="images/directions-1.jpg" alt="" class="direction__img">
-        <p class="direction__text">Намибия</p>
-      </div>
+        <div class="direction__descr-wrapper"><p class="direction__text">Намибия</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-2.jpg" alt="" class="direction__img">
-        <p class="direction__text">Танзания</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Танзания</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-3.jpg" alt="" class="direction__img">
-        <p class="direction__text">Кения</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Кения</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-4.jpg" alt="" class="direction__img">
-        <p class="direction__text">Ботсвана</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Ботсвана</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-5.jpg" alt="" class="direction__img">
-        <p class="direction__text">Кейптаун</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Кейптаун</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-6.jpg" alt="" class="direction__img">
-        <p class="direction__text">Мадагаскар</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Мадагаскар</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-7.jpg" alt="" class="direction__img">
-        <p class="direction__text">Занзибар</p>
-      </div>
+        <div class="direction__descr-wrapper"><p class="direction__text">Занзибар</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-8.jpg" alt="" class="direction__img">
-        <p class="direction__text">ЮАР</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">ЮАР</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-9.jpg" alt="" class="direction__img">
-        <p class="direction__text">Мозамбик</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Мозамбик</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-10.jpg" alt="" class="direction__img">
-        <p class="direction__text">Замбия</p>
-      </div>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Замбия</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
       <div class="direction__item"><img src="images/directions-11.jpg" alt="" class="direction__img">
-        <p class="direction__text">Конго</p>
+       <div class="direction__descr-wrapper"> <p class="direction__text">Конго</p><p class="direction__descr">Подробнее...</p>
+      </div></div>
+        <div class="content__item">
+          <img src="images/directions-1.jpg" alt="" class="">
+          <p class="content__title">Намибия</p>
+          <p>Основную часть Намибии составляют возвышенности, занимающие центр страны. Там находится высочайшая точка (гора Кёнигштайн (Брандберг), 2606 м). С запада центральное плато ограничено пустыней Намиб, выходящей к Атлантическому океану, с юга — рекой Оранжевой, с востока — 20 м и 21 м градусом восточной долготы и пустыней Калахари. Полоса Каприви и крайний север страны заняты джунглями.</p>
+        </div>
+        <div class="content__item">
+          <img src="images/directions-2.jpg" alt="" class="">
+          <p class="content__title">Танзания</p>
+          <p>Большую часть страны занимают обширные плоскогорья. Вдоль берега Индийского океана тянется прибрежная низменность.
+
+            Территория страны включает в себя часть крупнейших озёр Африки: озеро Виктория на севере, озеро Танганьика (которое часто называют двойником Байкала) на западе и Ньяса на юге.
+
+            На территории Танзании расположена самая высокая гора Африки — стратовулкан Килиманджаро (5895 м[8]).</p>
+        </div>
+        <div class="content__item">
+          <img src="images/directions-3.jpg" alt="" class="">
+          <p class="content__title">Кения</p>
+          <p>Кения находится на территории, которая, по мнению многих учёных, является прародиной человечества. Там, на восточном побережье озера Рудольф, обнаружены орудия труда и останки предков людей, живших предположительно около 3 млн лет назад в Ломекви[7].</p>
+        </div>
+      <div class="content__item">
+        <img src="images/directions-4.jpg" alt="" class="">
+        <p class="content__title">Ботсвана</p>
+         <p>Ботсвана расположена в Южной Африке. Территория страны составляет 581 730 км², из них площадь суши — 566 730 км²[2]. Протяжённость Ботсваны в направлении с северо-востока до юго-запада составляет 1110 км, с юго-востока до северо-запада — 960 км[9].</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-5.jpg" alt="" class="">
+        <p class="content__title">Кейптаун</p>
+         <p>Достоверных сведений о том, когда здесь появились первые людские поселения, нет. Самые ранние археологические находки (пещера Пирс-Кейв, возле Фиш-Хука) относятся ко времени примерно 12 000 лет назад. О ранней истории этого региона известно мало. Первые письменные свидетельства относятся лишь к 1486 г., когда мыс Доброй Надежды посетил португалец Бартоломеу Диаш.</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-6.jpg" alt="" class="">
+        <p class="content__title">Мадагаскар</p>
+         <p>Остров Мадагаскар омывается водами Индийского океана и располагается около восточного побережья Южной Африки, от которого отделён Мозамбикским проливом[10]. Высшая точка острова — потухший вулкан Марумукутру (2876 м), который находится в горном массиве Царатанана, в северной части острова. Общая площадь государства — 587 040 км². </p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-7.jpg" alt="" class="">
+        <p class="content__title">Занзибар</p>
+         <p>Основу архипелага составляют три крупных острова — Унгуджа (часто называют остров Занзибар), Пемба и Мафия — остальные острова гораздо мельче, расположены вокруг них. Город Занзибар, самый большой город (население 257 тыс. жителей на 2003 год) архипелага, расположен на острове Унгуджа. Климат тёплый и очень влажный.</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-8.jpg" alt="" class="">
+        <p class="content__title">ЮАР</p>
+         <p>В ЮАР представлены разнообразные климатические зоны, от сухой пустыни Намиб до субтропиков на востоке у границы с Мозамбиком и побережья Индийского океана. На востоке местность быстро поднимается, образуя Драконовы горы и переходя в большое внутреннее плато, называемое велд.</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-9.jpg" alt="" class="">
+        <p class="content__title">Мозамбик</p>
+         <p>Территория Мозамбика простирается вдоль побережья Индийского океана примерно на 3000 км.
+
+           Длина береговой линии страны: 2 470 км. Береговая линия на севере расчленена небольшими бухтами, берега невысокие, но скалистые. Южнее берега низкие, местами заболоченные. Имеются естественные гавани — Бейра, Мапуту, Накала, Пемба.</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-10.jpg" alt="" class="">
+        <p class="content__title">Замбия</p>
+         <p>Замбия расположена в Южной Африке. Государство с тропическим климатом без выхода к морю, расположенное в основном на плато. По площади (752 614 км²) занимает 38 место в мире. Бассейн протекающей вдоль западной и южной границ страны реки Замбези занимает около трёх четвертей территории государства, остальная часть относится к бассейну реки Конго.</p>
+      </div>
+      <div class="content__item">
+        <img src="images/directions-11.jpg" alt="" class="">
+        <p class="content__title">Конго</p>
+         <p>Изначально территорию Конго населяли пигмеи, занимавшиеся охотой и собирательством. Позднее, примерно в VI—IX веках, пришли племена банту, составляющие ныне порядка 98 % населения.</p>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -130,7 +216,7 @@
   </div>
 </section>
 
-<section class="popular">
+<section class="popular" id="popular">
   <div class="container">
     <h2 class="popular__title title">
       Популярные предложения
@@ -182,7 +268,7 @@
   </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
   <div class="container">
     <div class="about__inner">
       <div class="about__content">
@@ -232,7 +318,7 @@
   </div>
 </section>
 
-<section class="tour">
+<section class="tour" id="tour">
   <div class="container">
     <h2 class="tour__title title">Сафари тур премиум класса</h2>
     <div class="tour__wrapper">
@@ -268,7 +354,7 @@
   </div>
 </section>
 
-<section class="booking">
+<section class="booking" id="booking">
   <div class="container">
     <h2 class="booking__title title">
       Забронируйте отдых в Африке

@@ -27,6 +27,64 @@ a{
     margin: 0 auto;
     padding: 0 10px;
 }
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: #fff;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.75);
+
+}
+.popup_close{
+    position: absolute;
+    top: 11.8rem;
+    right: 4rem;
+    font-size: 4rem;
+    color: #ffffff;
+    border: none;
+    background: transparent;
+}
+.popup_content{
+    padding-top: 10rem;
+}
+.popup__dir{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.content__item{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 30rem;
+    min-height: 10rem;
+    border-radius: 5px;
+    padding: 20px;
+background-color: #fff;
+color: #000;
+    z-index: 10;
+    position: absolute;
+    left: 33%;
+    right: 33%;
+}
+
+.content__item img{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.content__title {
+    margin-bottom: 20px;
+}
+
 .header{
     background-image: url("../images/header-bg.jpg");
     background-repeat: no-repeat;
@@ -115,10 +173,19 @@ a{
 }
 .direction__text{
     font-size: 16px;
+    padding: 10px 19px 14px;
+}
+.direction__descr-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border: 1px solid #d9d9de;
     border-top: none;
-    padding: 10px 19px 14px;
-
+}
+.direction__descr{
+    font-size: 12px;
+    color: #5d5b5b;
+    margin-right: 10px;
 }
 .travel-info{
     background-image: url(../images/travel-info-bg.jpg);
@@ -146,7 +213,7 @@ a{
     line-height: 130%;
 }
 .popular {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
 }
 .popular__title {
     margin-bottom: 40px;
@@ -191,13 +258,13 @@ a{
     font-size: 24px;
 }
 .map{
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
 .map__title{
     margin-bottom: 46px;
 }
 .about {
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 .about__inner{
     display: grid;
@@ -458,44 +525,64 @@ color: #1F1E1E;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 15px;
     }
+    .content__item{
+        left: 30%;
+        right: 30%;
+    }
+
+}
+@media (max-width: 990px) {
+    .content__item{
+        left: 25%;
+        right: 25%;
+    }
 }
 
 @media (max-width: 800px) {
     .header__phone span {
         display: none;
     }
-    .travel-info__items{
-        grid-template-columns: repeat(3,1fr);
+
+    .travel-info__items {
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px;
     }
+
     .header__title {
         margin-top: -30px;
         font-size: 80px;
     }
+
     .header__descr {
         color: #fff;
     }
 
-    .popular__items{
-        grid-template-columns: repeat(2,1fr);
+    .popular__items {
+        grid-template-columns: repeat(2, 1fr);
     }
+
     .popular__link:nth-child(3),
     .popular__link:nth-child(6) {
         grid-column: auto;
         grid-row: auto;
     }
+
     .popular__link {
         min-height: 320px;
     }
-    .map__iframe{
+
+    .map__iframe {
         height: 400px;
     }
-    .about__inner{
+
+    .about__inner {
         grid-template-columns: 1fr;
     }
-    .about__popup{
+
+    .about__popup {
         min-height: 450px;
     }
+
     .tour,
     .footer,
     .gallery,
@@ -504,46 +591,64 @@ color: #1F1E1E;
     .about,
     .popular,
     .map,
-    .direction{
+    .direction {
         padding: 50px 0;
     }
-    .tour__wrapper{
+
+    .tour__wrapper {
         column-count: 1;
     }
-    .tour__title{
+
+    .tour__title {
         margin-bottom: 40px;
     }
-    .tour__info{
+
+    .tour__info {
         grid-template-columns: repeat(2, 1fr);
 
     }
-    .booking__input{
+
+    .booking__input {
         width: 80%;
     }
-    .booking__area{
+
+    .booking__area {
         width: 80%;
         margin-bottom: 30px;
     }
-    .booking__form{
+
+    .booking__form {
         flex-direction: column;
     }
-    .booking__btn{
+
+    .booking__btn {
         margin-bottom: 20px;
     }
-    .booking__checkbox-style{
+
+    .booking__checkbox-style {
         position: relative;
         margin: 0 10px 0 0;
     }
-    .footer__logo{
+
+    .footer__logo {
         margin-bottom: 40px;
     }
-    .footer__wrapper{
+
+    .footer__wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-}
 
+    .popup_close {
+        top: 5.8rem;
+        right: 1rem;
+    }
+    .content__item{
+        left: 20%;
+        right: 20%;
+    }
+}
 
 @media (max-width: 560px) {
     .header__title{
@@ -661,6 +766,10 @@ color: #1F1E1E;
     .slick-next {
         right: 30%;
     }
+    .content__item{
+        left: 15%;
+        right: 15%;
+    }
 }
 @media (max-width: 460px) {
     .header__descr {
@@ -699,6 +808,10 @@ color: #1F1E1E;
     }
     .about__popup{
         min-height: 250px;
+    }
+    .content__item{
+        left: 10%;
+        right: 10%;
     }
 }
 
